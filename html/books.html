@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thư viện - Sách</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Date picker -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <div class="wrapper" style="display: flex">
+      <div class="sidebar">
+        <div
+          class="container"
+          style="display: flex; flex-direction: column; padding: 20px"
+        >
+          <div class="sidebar-header">
+            <span>Thư viện</span>
+          </div>
+          <span class="cross"></span>
+          <ul class="sidebar-body">
+            <li class="sidebar-item active">
+              <a href="/html/books.html" class="sidebar-link">
+                <i class="fa-solid fa-book sidebar-icon"></i>
+                Sách
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="/html/dashboard.html" class="sidebar-link">
+                <i class="fa-solid fa-folder sidebar-icon"></i>
+                Phiếu ghi mượn
+              </a>
+            </li>
+          </ul>
+          <span class="cross"></span>
+          <div class="sidebar-footer">
+            <img
+              src="https://hoidap247.com/static/img/avatar.png"
+              alt="avatar"
+              class="avatar"
+            />
+            <span class="user" style="margin-left: 10px"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" style="margin: 0; flex-grow: 1">
+        <div style="display: flex; margin-bottom: 25px">
+          <form class="form-search">
+            <input class="input-search" type="search" placeholder="Tìm kiếm" />
+            <button
+              class="btn btn-primary btn-search"
+              type="submit"
+              style="margin-left: 10px"
+            >
+              Tìm
+            </button>
+          </form>
+        </div>
+
+        <div class="books list"></div>
+      </div>
+    </div>
+
+    <div class="modal modal-info">
+      <div class="modal-container">
+        <div class="modal-action">
+          <i class="fa fa-times"></i>
+        </div>
+        <div class="modal-header">
+          <h2 class="modal-title">Thông tin</h2>
+        </div>
+        <div class="modal-body"></div>
+      </div>
+    </div>
+
+    <script type="module" src="/js/user/books.js"></script>
+    <script>
+      document.querySelector(".user").textContent = JSON.parse(
+        localStorage.getItem("user_info")
+      )?.name;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý thư viện - Trang chủ</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Date picker -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <!-- <div class="wrapper" style="display: flex">
+      <div class="sidebar">
+        <div
+          class="container"
+          style="display: flex; flex-direction: column; padding: 20px"
+        >
+          <div class="sidebar-header">
+            <span>Thư viện</span>
+          </div>
+          <span class="cross"></span>
+          <ul class="sidebar-body">
+            <li class="sidebar-item active">
+              <a href="/" class="sidebar-link">
+                <i class="fa-solid fa-house sidebar-icon"></i>
+                Trang chủ
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="/html/cards.html" class="sidebar-link">
+                <i class="fa-solid fa-id-card sidebar-icon"></i>
+                Thẻ
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="/html/books.html" class="sidebar-link">
+                <i class="fa-solid fa-book sidebar-icon"></i>
+                Sách
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="/html/dashboard.html" class="sidebar-link">
+                <i class="fa-solid fa-folder sidebar-icon"></i>
+                Phiếu ghi mượn
+              </a>
+            </li>
+          </ul>
+          <span class="cross"></span>
+          <div class="sidebar-footer">
+            <img
+              src="https://hoidap247.com/static/img/avatar.png"
+              alt="avatar"
+              class="avatar"
+            />
+            <span class="user" style="margin-left: 10px">Admin</span>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <form class="form form-register" autocomplete="off">
+      <div class="form-group">
+        <label for="form-name" class="form-label">Tên</label>
+        <input
+          type="text"
+          class="form-input"
+          id="form-name"
+          name="name"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="form-email" class="form-label">Email</label>
+        <input
+          type="text"
+          class="form-input"
+          id="form-email"
+          name="email"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="form-birthday" class="form-label">Ngày sinh</label>
+        <input
+          type="text"
+          class="form-input"
+          id="form-birthday"
+          name="birthday"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="form-password" class="form-label">Mật khẩu</label>
+        <input
+          type="password"
+          class="form-input"
+          id="form-password"
+          name="password"
+          required
+        />
+      </div>
+      <button
+        type="submit"
+        class="btn btn-primary form-submit form-submit-register"
+      >
+        Đăng kí
+      </button>
+      <p class="form-description">
+        Đã có tài khoản? <a href="/html/login.html">Đăng nhập</a>
+      </p>
+    </form>
+
+    <script type="module" src="/js/index.js"></script>
+  </body>
+</html>

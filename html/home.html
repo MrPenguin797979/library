@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thư viện - Sách</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <div class="wrapper" style="display: flex">
+      <div class="sidebar">
+        <div
+          class="container"
+          style="display: flex; flex-direction: column; padding: 20px"
+        >
+          <div class="sidebar-header">
+            <span>Thư viện</span>
+          </div>
+          <span class="cross"></span>
+          <ul class="sidebar-body">
+            <li class="sidebar-item">
+              <a href="/html/books.html" class="sidebar-link">
+                <i class="fa-solid fa-book sidebar-icon"></i>
+                Sách
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="/html/dashboard.html" class="sidebar-link">
+                <i class="fa-solid fa-folder sidebar-icon"></i>
+                Phiếu ghi mượn
+              </a>
+            </li>
+          </ul>
+          <span class="cross"></span>
+          <div class="sidebar-footer">
+            <img
+              src="https://hoidap247.com/static/img/avatar.png"
+              alt="avatar"
+              class="avatar"
+            />
+            <span class="user" style="margin-left: 10px"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelector(".user").textContent = JSON.parse(
+        localStorage.getItem("user_info")
+      )?.name;
+    </script>
+  </body>
+</html>
