@@ -18,7 +18,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
 
 const firebaseConfig = {
-  apiKey: API_KEY,
+  apiKey: "AIzaSyDDixPO-wuNmiiCgWBg0x9OWn7wki623wg",
   authDomain: "library-731a3.firebaseapp.com",
   databaseURL: "https://library-731a3-default-rtdb.firebaseio.com",
   projectId: "library-731a3",
