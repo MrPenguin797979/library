@@ -750,7 +750,7 @@ export default function create({
         if (!snapshot.exists()) return;
 
         const datas = Object.values(snapshot.val());
-        const books = [...table.querySelectorAll("tr > td:nth-child(4)")].map(
+        const books = [...table.querySelectorAll("tr > td:nth-child(3)")].map(
           (e) => e.textContent
         );
 
