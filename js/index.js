@@ -677,57 +677,6 @@ export default function create({
             });
           }
 
-          // if (page === "Sách") {
-          //   book = parent[1].textContent;
-
-          //   get(child(ref(db), "Phiếu mượn")).then((snapshot) => {
-          //     if (!snapshot.exists()) return;
-
-          //     const datas = Object.values(snapshot.val());
-          //     const res = datas.filter((data) => data["Sách"] === book);
-
-          //     res.forEach((item) => {
-          //       remove(ref(db, `Phiếu mượn/${item["IDD"]}`)).catch((error) =>
-          //         alert(error)
-          //       );
-          //     });
-          //   });
-          // }
-
-          if (page === "Thẻ") {
-            get(child(ref(db), "Phiếu mượn")).then((snapshot) => {
-              if (!snapshot.exists()) return;
-
-              const datas = Object.values(snapshot.val());
-              const res = datas.filter((data) => data["Người mượn"] === user);
-
-              res.forEach((item) => {
-                const { IDD: id, Sách: book } = item;
-
-                get(child(ref(db), "Sách"))
-                  .then((snapshot) => {
-                    if (!snapshot.exists()) return;
-
-                    const datas = Object.values(snapshot.val());
-                    const bookID = datas.find((data) => data["Tên"] === book)[
-                      "ID"
-                    ];
-
-                    update(ref(db, `Sách/${bookID}`), {
-                      "Tình trạng": "Chưa được mượn",
-                    })
-                      .then(() => {
-                        remove(ref(db, `Phiếu mượn/${id}`)).catch((error) =>
-                          alert(error)
-                        );
-                      })
-                      .catch((error) => alert(error));
-                  })
-                  .catch((error) => alert(error));
-              });
-            });
-          }
-
           remove(ref(db, `${tableName}/${_id}`))
             .then(() => {
               GetData();
