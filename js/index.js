@@ -16,7 +16,6 @@ import {
   ref,
   child,
 } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js";
-import { API_KEY } from "./secret.js";
 
 const firebaseConfig = {
   apiKey: API_KEY,
