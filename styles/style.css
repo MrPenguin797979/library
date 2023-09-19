@@ -364,6 +364,7 @@ ul {
   display: grid;
   grid-template-columns: repeat(var(--columns), var(--width));
   gap: 35px;
+  justify-content: center;
 }
 
 .list .list-item {
